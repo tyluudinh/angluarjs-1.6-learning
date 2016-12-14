@@ -1,0 +1,19 @@
+<title>{{$ctrl.titlePage}}</title>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-5 phone-images">
+			<img ng-src="{{$ctrl.mainImagePath}}" class="phone">
+		</div>
+		<div class="col-md-7">
+			<h2>{{$ctrl.phoneDetail.name}}</h2>
+			<p>{{$ctrl.phoneDetail.description}}</p>
+			<ul class="phone-thumbs">
+				<li ng-repeat='phoneImg in $ctrl.phoneDetail.images'>
+					<img ng-src="{{phoneImg}}" ng-click='$ctrl.slideImage(phoneImg)' ng-dblclick='$ctrl.dblClick(phoneImg)'>
+				</li>
+			</ul>
+			<img ng-src="{{$ctrl.imgDblClick}}">
+		</div>
+	</div>
+	
+</div>
